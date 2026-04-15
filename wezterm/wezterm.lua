@@ -61,9 +61,7 @@ local dimmer = {
 local background_with_wallpaper = {
 	{
 		source = {
-			File = wez.config_dir .. "/backgrounds/chaeyoung-1.jpeg",
-			-- File = wez.config_dir .. "/backgrounds/pain.jpg",
-			-- File = wez.config_dir .. "/backgrounds/azumanga.gif",
+			File = "/Users/darryl.effendi/Pictures/bg-matsuya-dark.jpg",
 		},
 		width = "Cover",
 		height = "Cover",
