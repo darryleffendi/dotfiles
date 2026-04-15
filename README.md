@@ -9,6 +9,9 @@ ln -s ~/.config/dotfiles/nvim ~/.config/nvim
 
 # Starship
 ln -s ~/.config/dotfiles/starship.toml ~/.config/starship.toml
+
+# WezTerm
+ln -s ~/.config/dotfiles/wezterm/ ~/.config/wezterm
 ```
 
 ## Windows
