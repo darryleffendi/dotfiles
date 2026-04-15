@@ -17,7 +17,6 @@ config.initial_cols = 160
 -- Font Options
 
 config.font = wez.font("MesloLGS Nerd Font Mono")
-config.font_size = 18
 
 -- Color options
 
@@ -61,7 +60,7 @@ local dimmer = {
 local background_with_wallpaper = {
 	{
 		source = {
-			File = "/Users/darryl.effendi/Pictures/bg-matsuya-dark.jpg",
+			File = wez.config_dir .. "/backgrounds/bg-matsuya-dark.jpg",
 		},
 		width = "Cover",
 		height = "Cover",
@@ -70,7 +69,6 @@ local background_with_wallpaper = {
 		repeat_x = "NoRepeat",
 		repeat_y = "NoRepeat",
 		opacity = 1,
-		hsb = dimmer,
 	},
 }
 
