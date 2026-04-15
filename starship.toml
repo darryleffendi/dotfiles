@@ -2,8 +2,8 @@
 
 add_newline = true
 command_timeout = 1000
-format = """[┌](238) $os$username$hostname$directory$git_branch$git_status
-[└](238)[⮞](238)  """
+format = """[┌](238) $os$hostname$directory$fill$git_branch$git_status
+[└](238)[](238)  """
 
 # Drop ugly default prompt characters
 [character]
@@ -35,12 +35,12 @@ show_always = true
 # Shows the hostname
 [hostname]
 ssh_only = false
-format = 'on [$hostname](bold yellow) '
+format = '[$hostname](bold yellow) '
 disabled = false
 
 # Shows current directory
 [directory]
-truncation_length = 1
+truncation_length = 3
 truncation_symbol = '…/'
 home_symbol = '󰋜 ~'
 read_only_style = '197'
@@ -49,8 +49,8 @@ format = 'at [$path]($style)[$read_only]($read_only_style) '
 
 # Shows current git branch
 [git_branch]
-symbol = ' '
-format = 'via [$symbol$branch]($style)'
+symbol = ' '
+format = '[$symbol$branch]($style) '
 # truncation_length = 4
 truncation_symbol = '…/'
 style = 'bold green'
@@ -92,6 +92,9 @@ disabled = true
 
 [nodejs]
 disabled = true
+
+[fill]
+symbol = ' '
 
 [ruby]
 disabled = true
