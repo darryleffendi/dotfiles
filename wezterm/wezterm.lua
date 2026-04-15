@@ -17,7 +17,7 @@ config.initial_cols = 160
 -- Font Options
 
 config.font = wez.font("MesloLGS Nerd Font Mono")
-config.font_size = 12
+config.font_size = 14
 
 -- Color options
 
