@@ -5,10 +5,10 @@
 git clone https://github.com/darryleffendi/dotfiles.git ~/.config/dotfiles
 
 # Nvim
-cp -r ~/.config/dotfiles/nvim ~/.config/nvim
+ln -s ~/.config/dotfiles/nvim ~/.config/nvim
 
 # Starship
-cp ~/.config/dotfiles/starship.toml ~/.config/starship.toml
+ln -s ~/.config/dotfiles/starship.toml ~/.config/starship.toml
 ```
 
 ## Windows
