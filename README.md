@@ -1,6 +1,7 @@
 # Dotfiles
 
 ## Linux (WSL / VPS)
+
 ```bash
 git clone https://github.com/darryleffendi/dotfiles.git ~/.config/dotfiles
 
@@ -13,6 +14,12 @@ ln -s ~/.config/dotfiles/starship.toml ~/.config/starship.toml
 # Tmux
 ln -s ~/.config/dotfiles/tmux/ ~/.config/tmux
 
+# Aerospace
+ln -s ~/.config/dotfiles/.aerospace.toml ~/.aerospace.toml
+
+# Karabiner
+ln -s ~/.config/dotfiles/karabiner/ ~/.config/karabiner
+
 # Ghostty
 ln -s ~/.config/dotfiles/ghostty/ ~/.config/ghostty
 
@@ -21,6 +28,7 @@ ln -s ~/.config/dotfiles/wezterm/ ~/.config/wezterm
 ```
 
 ## Windows
+
 ```bash
 git clone https://github.com/darryleffendi/dotfiles.git $env:USERPROFILE\dotfiles
 
@@ -35,5 +43,4 @@ cp $env:USERPROFILE\dotfiles\wezterm $env:USERPROFILE\.config\wezterm
 
 # Ghostty
 cp $env:USERPROFILE\dotfiles\ghostty $env:USERPROFILE\.config\ghostty
-
 ```
