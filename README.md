@@ -5,6 +5,9 @@
 ```bash
 git clone https://github.com/darryleffendi/dotfiles.git ~/.config/dotfiles
 
+# Zshrc
+ln -s ~/.config/dotfiles/.zshrc ~/.zshrc
+
 # Nvim
 ln -s ~/.config/dotfiles/nvim ~/.config/nvim
 
