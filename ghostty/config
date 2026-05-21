@@ -3,7 +3,7 @@ shell-integration = zsh
 font-family = "MesloLGS Nerd Font Mono"
 theme = dark:Rose Pine,light:Rose Pine Dawn
 
-background-image = /Users/darryl.effendi/Pictures/backgrounds/bg-matsuya-dark.jpg
+background-image = /Users/darryl.effendi/.config/dotfiles/ghostty/backgrounds/bg-matsuya-blur.png
 background-image-fit = cover
 
 background = 0a0a0a
@@ -22,6 +22,10 @@ cursor-style-blink = false
 window-padding-x = 20
 window-padding-y = 20
 
+window-save-state = never
+
+keybind = cmd+t=unbind
+keybind = cmd+shift+t=new_tab
 
 #quick terminal
 quick-terminal-position = center
