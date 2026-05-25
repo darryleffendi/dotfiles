@@ -25,7 +25,8 @@ window-padding-y = 20
 window-save-state = never
 
 keybind = cmd+t=unbind
-keybind = cmd+shift+t=new_tab
+keybind = cmd+n=unbind
+keybind = cmd+shift+t=new_window
 
 #quick terminal
 quick-terminal-position = center
