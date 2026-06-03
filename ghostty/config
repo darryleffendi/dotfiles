@@ -1,15 +1,20 @@
 shell-integration = zsh
 
-font-family = "MesloLGS Nerd Font Mono"
+# font-family = "MesloLGS Nerd Font Mono"
+font-family = "FiraCode Nerd Font Mono"
 theme = dark:Rose Pine,light:Rose Pine Dawn
 
-background-image = /Users/darryl.effendi/.config/dotfiles/ghostty/backgrounds/bg-matsuya-blur.png
-background-image-fit = cover
+# background-image = /Users/darryl.effendi/.config/dotfiles/ghostty/backgrounds/bg-matsuya-blur.png
+# background-image-fit = cover
+# background-opacity = 1
+# background = 0a0a0a
 
-background = 0a0a0a
+background-opacity = 0.85
+background-blur = macos-glass-regular
+
+background = 0a0a0d
 foreground = e0def4
-background-opacity = 1
-background-blur-radius = 10
+background-blur-radius = 25
 selection-background = 393552
 selection-foreground = e0def4
 
