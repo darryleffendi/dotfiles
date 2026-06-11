@@ -5,5 +5,7 @@ return {
     "nvim-lua/plenary.nvim",
     "stevearc/dressing.nvim", -- optional for vim.ui.select
   },
-  config = true,
+  opts = {
+    flutter_path = vim.fn.expand("~/fvm/default/bin/flutter"),
+  },
 }

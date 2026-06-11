@@ -8,5 +8,10 @@ return {
         hide_gitignored = false,
       },
     },
+    window = {
+      mappings = {
+        ["O"] = "expand_all_nodes",
+      },
+    },
   },
 }
