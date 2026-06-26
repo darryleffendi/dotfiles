@@ -40,6 +40,9 @@ quick-terminal-screen =  mouse
 quick-terminal-autohide = false
 quick-terminal-animation-duration = 0
 
-#keybinds
-
+# keybinds
 keybind = global:cmd+\=toggle_quick_terminal
+
+# Shaders
+custom-shader = shaders/cursor_tail.glsl
+custom-shader = shaders/ripple_rectangle_cursor.glsl

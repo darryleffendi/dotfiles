@@ -26,7 +26,7 @@ ln -s ~/.config/dotfiles/karabiner/ ~/.config/karabiner
 # Ghostty
 ln -s ~/.config/dotfiles/ghostty/ ~/.config/ghostty
 
-# WezTerm
+# WezTerm (Unused)
 ln -s ~/.config/dotfiles/wezterm/ ~/.config/wezterm
 ```
 
@@ -41,7 +41,7 @@ cp -r $env:USERPROFILE\dotfiles\nvim $env:LOCALAPPDATA\nvim
 # Starship
 cp $env:USERPROFILE\dotfiles\starship.toml $env:USERPROFILE\.config\starship.toml
 
-# WezTerm
+# WezTerm (Unused)
 cp $env:USERPROFILE\dotfiles\wezterm $env:USERPROFILE\.config\wezterm
 
 # Ghostty
