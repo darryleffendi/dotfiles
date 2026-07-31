@@ -1,0 +1,50 @@
+# herdr config — read from ~/.config/herdr/config.toml (symlinked here)
+# Keybindings mirror ~/.config/tmux/tmux.conf
+# Reload running server after edits: herdr server reload-config
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[theme.custom]
+overlay0 = "#41444f"
+
+[keys]
+prefix = "ctrl+b"
+
+# Splits (tmux: `=` side-by-side, `-` top/bottom)
+split_vertical = "prefix+="
+split_horizontal = "prefix+minus"
+
+# Pane navigation (tmux: h/j/k/l) 
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+
+# Wrap-around cycle through all panes (tmux-like edge wrap)
+cycle_pane_next = "prefix+tab"
+cycle_pane_previous = "prefix+shift+tab"
+
+# Tab navigation (tmux windows: i = previous, o = next)
+previous_tab = "prefix+i"
+next_tab = "prefix+o"
+
+# Workspace navigation
+next_workspace = "prefix+n"
+previous_workspace = "prefix+p"
+
+# Navigate-mode movement (workspace picker: ctrl+b w). j/k in addition to arrows.
+navigate_workspace_up = "k"
+navigate_workspace_down = "j"
+
+# Agent focus + navigation (no sustained navigate-mode for agents in herdr;
+# these are prefix actions — press prefix each time. Up/down the agent list.)
+focus_agent = "prefix+alt+1..9"   # jump to agent N in sidebar
+previous_agent = "prefix+shift+h"
+next_agent = "prefix+shift+l"
+
+[ui]
+pane_borders = true
+pane_gaps = false
+# accent = "#6c7086"

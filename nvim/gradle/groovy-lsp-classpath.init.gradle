@@ -1,0 +1,43 @@
+// Gradle init script that dumps the union of resolved dependency jars for a
+// (possibly multi-module) project into `<root>/.groovy-lsp-classpath`, one
+// absolute jar path per line.
+//
+// groovy-language-server (groovyls) has no build-tool integration: it only
+// resolves imports for jars listed in its `groovy.classpath` setting. This
+// task produces that list so Spring/third-party/sibling-module symbols resolve
+// and go-to-declaration / go-to-implementation work.
+//
+// Usage (see scripts/gen-groovy-classpath.sh):
+//   ./gradlew -I groovy-lsp-classpath.init.gradle printGroovyLspClasspath -q
+gradle.rootProject {
+    tasks.register('printGroovyLspClasspath') {
+        // never cache; classpath must reflect current dependencies
+        outputs.upToDateWhen { false }
+        doLast {
+            def jars = new TreeSet<String>()
+            // runtimeClasspath already includes the compile classpath; the test
+            // variant adds Spock/JUnit etc. so imports in src/test resolve too.
+            def wanted = ['runtimeClasspath', 'testRuntimeClasspath']
+            rootProject.allprojects.each { p ->
+                wanted.each { name ->
+                    def cfg = p.configurations.findByName(name)
+                    if (cfg == null || !cfg.canBeResolved) {
+                        return
+                    }
+                    try {
+                        cfg.resolve().each { f ->
+                            if (f.isFile() && f.name.endsWith('.jar')) {
+                                jars.add(f.absolutePath)
+                            }
+                        }
+                    } catch (Exception e) {
+                        System.err.println("groovy-lsp: skipping ${p.name}:${name} (${e.message})")
+                    }
+                }
+            }
+            def out = new File(rootProject.projectDir, '.groovy-lsp-classpath')
+            out.text = jars.join('\n') + (jars.isEmpty() ? '' : '\n')
+            System.err.println("groovy-lsp: wrote ${jars.size()} jars -> ${out}")
+        }
+    }
+}

@@ -1,6 +1,7 @@
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval $(thefuck --alias)
+export PATH="$HOME/.local/bin:$PATH"
 
 # IDEs
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
@@ -62,3 +63,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/darryl.effendi/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"

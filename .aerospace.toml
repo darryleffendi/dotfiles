@@ -253,6 +253,6 @@ run = 'move-node-to-workspace M'
 if.app-id = 'notion.id'
 run = 'move-node-to-workspace M'
 
-[[on-window-detected]] # Lark - Q
-if.app-id = 'com.larksuite.larkApp'
-run = 'move-node-to-workspace Q'
+# [[on-window-detected]] # Lark - Q
+# if.app-id = 'com.larksuite.larkApp'
+# run = 'move-node-to-workspace Q'
